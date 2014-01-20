@@ -1,6 +1,6 @@
 {
   "name": "voxel-start",
-  "description": "",
+  "description": "show start icon until interaction is attained (voxel.js plugin)",
   "version": "0.0.1",
   "repository": {
     "type": "git",
