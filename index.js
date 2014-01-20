@@ -3,8 +3,10 @@ module.exports = function(game, opts) {
 };
 
 function PlayButtonPlugin(game, opts) {
+  this.game = game;
+
   this.icon = document.createElement('div');
-  this.icon.textContent = '\u25ba';
+  this.icon.textContent = '\u25ba'; // U+25BA BLACK RIGHT-POINTING POINTER
   this.icon.setAttribute('id', 'playbutton');
   this.icon.setAttribute('style', [
       'font-size: 200pt;',
@@ -20,9 +22,17 @@ function PlayButtonPlugin(game, opts) {
 };
 
 PlayButtonPlugin.prototype.enable = function() {
-  this.icon.style.visibility = '';
+  var self = this;
+
+  this.game.interact.once('attain', function() {
+    if (self.game.plugins)
+      self.game.plugins.disable('voxel-playbutton');
+    else
+      self.disable();
+  });
 };
 
 PlayButtonPlugin.prototype.disable = function() {
-  this.icon.style.visibility = 'hidden'
+  this.icon.parentElement.removeChild(this.icon);
+  delete self.icon;
 };
