@@ -1,10 +1,10 @@
 {
-  "name": "voxel-playbutton",
+  "name": "voxel-start",
   "description": "",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git@github.com:deathcap/voxel-playbutton.git"
+    "url": "git@github.com:deathcap/voxel-start.git"
   },
   "keywords": [
     "voxel"

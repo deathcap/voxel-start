@@ -1,8 +1,8 @@
 module.exports = function(game, opts) {
-  return new PlayButtonPlugin(game, opts);
+  return new StartPlugin(game, opts);
 };
 
-function PlayButtonPlugin(game, opts) {
+function StartPlugin(game, opts) {
   this.game = game;
 
   this.icon = document.createElement('div');
@@ -21,18 +21,18 @@ function PlayButtonPlugin(game, opts) {
   this.enable();
 };
 
-PlayButtonPlugin.prototype.enable = function() {
+StartPlugin.prototype.enable = function() {
   var self = this;
 
   this.game.interact.once('attain', function() {
     if (self.game.plugins)
-      self.game.plugins.disable('voxel-playbutton');
+      self.game.plugins.disable('voxel-start');
     else
       self.disable();
   });
 };
 
-PlayButtonPlugin.prototype.disable = function() {
+StartPlugin.prototype.disable = function() {
   this.icon.parentElement.removeChild(this.icon);
   delete self.icon;
 };
