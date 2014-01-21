@@ -3,6 +3,8 @@ module.exports = function(game, opts) {
 };
 
 function StartPlugin(game, opts) {
+  if (!game.isClient) return;
+
   this.game = game;
 
   this.icon = document.createElement('div');
