@@ -14,7 +14,8 @@ function StartPlugin(game, opts) {
       'font-size: 200pt;',
       'position: absolute;',
       'top: 40%;', // TODO: fix centering, not 50% since font is so big
-      'left: 50%;',
+      'text-align: center;',
+      'width: 100%;',
       'pointer-events: none;', // click 'through' this element to activate game
       ].join('\n'));
 
