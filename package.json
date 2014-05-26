@@ -2,12 +2,15 @@
   "name": "voxel-start",
   "description": "show start icon until interaction is attained (voxel.js plugin)",
   "version": "0.1.0",
+  "main": "start.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:deathcap/voxel-start.git"
   },
   "keywords": [
-    "voxel"
+    "voxel",
+    "plugin",
+    "start"
   ],
   "dependencies": {},
   "peerDependencies": {},
